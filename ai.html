@@ -85,7 +85,14 @@ footer {
       font-size: 0.9rem;
       color: #6b7280;
     }
-
+/* Mobile: align left when screen width is less than 768px */
+  @media (max-width: 768px) {
+    header h1,
+    header p {
+      text-align: left;
+      padding-left: 10px; /* optional: add some spacing from screen edge */
+    }
+  }
   </style>
 </head>
 <body>
@@ -163,6 +170,9 @@ footer {
 
 </body>
 </html>
+
+
+
 
 
 
