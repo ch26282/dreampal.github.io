@@ -25,7 +25,21 @@
     header p {
       margin: 0.5rem 0 0;
       font-size: 1.2rem;
-    }
+}
+/* Default desktop view */
+header {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Mobile fix: align header text left */
+@media (max-width: 768px) {
+  header {
+    text-align: left;
+    padding: 1rem;
+  }
+}
+
     /* Navigation */
 nav {
   background: #334155;
