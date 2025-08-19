@@ -7,10 +7,61 @@
   <style>
     body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9fafc; color:#333; }
     header { background:#0d47a1; color:#fff; text-align:center; padding:2rem 1rem; }
-    header h1 { margin:0; font-size:2rem; }
-    nav { background:#1565c0; text-align:center; padding:0.8rem; }
-    nav a { color:#fff; text-decoration:none; margin:0 1rem; font-weight:bold; }
-    nav a:hover { text-decoration:underline; }
+header h1 { margin:0; font-size:2rem; }
+
+    /* Navigation */
+nav {
+  background: #334155;
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li {
+  margin: 0 1rem;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile menu */
+.menu-toggle {
+  display: none;
+  background: #334155;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #334155;
+    text-align: center;
+  }
+  .nav-links li {
+    margin: 1rem 0;
+  }
+  .menu-toggle {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+}
+
     main { max-width:700px; margin:2rem auto; padding:0 1rem; }
     form { display:flex; flex-direction:column; gap:1rem; }
     input, textarea { padding:0.75rem; font-size:1rem; width:100%; border:1px solid #ccc; border-radius:5px; }
@@ -33,11 +84,15 @@ footer {
 </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="sales.html">Comparable Sales</a>
-    <a href="ai.html">Why AI Companions?</a>
-    <a href="contact.html">Contact Seller</a>
-  </nav>
+  <button class="menu-toggle">☰ Menu</button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="sales.html">Comparable Sales</a></li>
+    <li><a href="ai.html">AI Opportunity</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
 
   <main>
     <h2>Inquire About Dreampal.com</h2>
@@ -58,7 +113,16 @@ footer {
 <footer>
     © dreampal.com – Premium Domain Listing
   </footer>
+<script>
+  const toggle = document.querySelector(".menu-toggle");
+  const links = document.querySelector(".nav-links");
+
+  toggle.addEventListener("click", () => {
+    links.classList.toggle("active");
+  });
+</script>
 
 </body>
 </html>
+
 
