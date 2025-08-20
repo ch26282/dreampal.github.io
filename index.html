@@ -85,6 +85,11 @@ nav {
       padding: 0 1rem;
       text-align: center;
 }
+section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
 .left-text {
   text-align: left;
   max-width: 800px;   /* keeps line length readable */
@@ -128,15 +133,17 @@ footer {
 /* Mobile fix: align text left on small screens */
     @media (max-width: 768px) {
       header p,
-      main h2 {
+      section h2 {
         text-align: left;
       }
+.	nav-links {
+        justify-content: flex-start;
+        padding-left: 10px;
+      }
     }
-
   </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9563749884177884"
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9563749884177884"
      crossorigin="anonymous"></script>
-
 </head>
 <body>
   <header>
@@ -155,7 +162,7 @@ footer {
 </nav>
 
 
-  <main>
+  <section>
     <h2>Memorable. Brandable. Trusted.</h2>
 <p>
 <section class="left-text">
@@ -168,7 +175,7 @@ footer {
 </section>
     <div class="price-box">
       Asking Price: $198,000
-      <br>OBO
+<br>OBO
     </div>
 
 <p>
@@ -182,7 +189,7 @@ footer {
     </p>
 
     <a href="contact.html" class="button">Inquire About Dreampal.com</a>
-  </main>
+  </section>
 <footer>
     © dreampal.com – Premium Domain Listing
   </footer>
@@ -196,6 +203,7 @@ footer {
 </script>
 </body>
 </html>
+
 
 
 
