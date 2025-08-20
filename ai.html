@@ -93,6 +93,22 @@ footer {
       padding-left: 10px; /* optional: add some spacing from screen edge */
     }
   }
+/* Default (desktop/tablet) */
+.nav-links {
+  display: flex;
+  justify-content: center; /* keeps nav centered on larger screens */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Mobile override */
+@media (max-width: 768px) {
+  .nav-links {
+    justify-content: flex-start; /* align left */
+    padding-left: 10px; /* optional: adds spacing from the screen edge */
+  }
+}
   </style>
 </head>
 <body>
@@ -170,6 +186,9 @@ footer {
 
 </body>
 </html>
+
+
+
 
 
 
