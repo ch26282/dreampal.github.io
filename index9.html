@@ -241,20 +241,27 @@
     © dreampal.com – Premium Domain Listing
   </footer>
 <script>
-  const toggleButton = document.querySelector('.menu-toggle');
-  const closeButton = document.querySelector('.menu-close');
-  const navLinks = document.querySelector('.nav-links');
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".mobile-nav-toggle");
+    const menuClose  = document.querySelector(".mobile-nav-close");
+    const mobileNav  = document.querySelector(".mobile-nav");
 
-  toggleButton.addEventListener('click', () => {
-    navLinks.classList.add('active');
-    toggleButton.style.display = 'none';
-  });
+    if (menuToggle && menuClose && mobileNav) {
+      // Open mobile menu
+      menuToggle.addEventListener("click", () => {
+        mobileNav.classList.add("active");
+        menuToggle.style.display = "none";   // hide ☰ when open
+      });
 
-  closeButton.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    toggleButton.style.display = 'block';
+      // Close mobile menu
+      menuClose.addEventListener("click", () => {
+        mobileNav.classList.remove("active");
+        menuToggle.style.display = "block";  // show ☰ again
+      });
+    }
   });
 </script>
 </body>
 </html>
+
 
